@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test2/screens/register_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -120,13 +121,22 @@ class _LoginPageState extends State<LoginPage> {
                     fontWeight: FontWeight.bold,
                     color: Color.fromARGB(255, 128, 128, 128)),
               ),
-              Text(
-                ' Daftar',
-                style: TextStyle(
-                  color: Color.fromARGB(255, 12, 100, 250),
-                  fontWeight: FontWeight.bold,
+              GestureDetector(
+                onTap: () => {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => RegisterPage(),
+                      ))
+                },
+                child: Text(
+                  ' Daftar',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 12, 100, 250),
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              )
+              ),
             ],
           )
         ]),
