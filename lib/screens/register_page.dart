@@ -123,20 +123,26 @@ class _RegisterPageState extends State<RegisterPage> {
           ),
           SizedBox(height: 15),
           //btn
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+          GestureDetector(
+            onTap: () => Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return LoginPage();
+                },
+              ),
+            ),
             child: Container(
-              padding: EdgeInsets.all(20),
               decoration: BoxDecoration(
                 color: Color.fromARGB(255, 12, 100, 250),
                 borderRadius: BorderRadius.circular(25),
               ),
-              child: Center(
-                child: Text(
-                  'Lanjutkan',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold, color: Colors.white),
-                ),
+              padding: const EdgeInsets.only(
+                  left: 187.0, right: 187.0, bottom: 20.0, top: 20.0),
+              child: const Text(
+                "Login",
+                style:
+                    TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
               ),
             ),
           ),
