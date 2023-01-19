@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:test2/screens/register_page.dart';
 
+import 'dashboard.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -69,7 +71,7 @@ class _LoginPageState extends State<LoginPage> {
           ),
           SizedBox(height: 15),
           //btn
-          Padding(
+          /*Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
             child: Container(
               padding: EdgeInsets.all(20),
@@ -77,12 +79,35 @@ class _LoginPageState extends State<LoginPage> {
                 color: Color.fromARGB(255, 12, 100, 250),
                 borderRadius: BorderRadius.circular(25),
               ),
-              child: Center(
+              child: const Center(
                 child: Text(
                   'Login',
                   style: TextStyle(
                       fontWeight: FontWeight.bold, color: Colors.white),
                 ),
+              ),
+            ),
+          ),*/
+          GestureDetector(
+            onTap: () => Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return DashboardPageState();
+                },
+              ),
+            ),
+            child: Container(
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 12, 100, 250),
+                borderRadius: BorderRadius.circular(25),
+              ),
+              padding: const EdgeInsets.only(
+                  left: 187.0, right: 187.0, bottom: 20.0, top: 20.0),
+              child: const Text(
+                "Login",
+                style:
+                    TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
               ),
             ),
           ),
