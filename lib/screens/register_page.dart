@@ -140,7 +140,7 @@ class _RegisterPageState extends State<RegisterPage> {
               padding: const EdgeInsets.only(
                   left: 187.0, right: 187.0, bottom: 20.0, top: 20.0),
               child: const Text(
-                "Login",
+                "Lanjutkan",
                 style:
                     TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
               ),

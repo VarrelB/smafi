@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test2/screens/register_page.dart';
-
-import 'dashboard.dart';
+import 'package:test2/screens/DashboardPage.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -22,7 +21,7 @@ class _LoginPageState extends State<LoginPage> {
                 left: 100.0, right: 100.0, bottom: 20.0, top: 20.0),
             child: Image.asset('lib/assets/login.png'),
           ),
-          //sup
+          //login
           Text(
             "Login",
             style: TextStyle(
@@ -93,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
               context,
               MaterialPageRoute(
                 builder: (context) {
-                  return DashboardPageState();
+                  return Dashboard();
                 },
               ),
             ),
